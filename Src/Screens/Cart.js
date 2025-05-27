@@ -1,14 +1,12 @@
 import React from 'react'
-import { FlatList, StyleSheet, Text, View } from 'react-native'
-import PageBackground from '../Components/PageBackground'
-import Header from '../Components/Header'
+import { FlatList, StyleSheet, View } from 'react-native'
 import { useSelector } from 'react-redux'
-import ProductsBlock from '../Components/ProductsBlock'
-import EmptyListView from '../Components/EmptyListView'
-import { actuatedNormalize } from '../Constants/PixelScaling'
-import productImages from '../Constants/ProductImages'
-import ListItemValue from '../Components/ListItemValue'
 import { PrimaryButton } from '../Components/Buttons'
+import EmptyListView from '../Components/EmptyListView'
+import Header from '../Components/Header'
+import ListItemValue from '../Components/ListItemValue'
+import PageBackground from '../Components/PageBackground'
+import { actuatedNormalize } from '../Constants/PixelScaling'
 
 const Cart = (props) => {
 
@@ -34,7 +32,7 @@ const Cart = (props) => {
                 keyExtractor={(item) => item.product}
                 ItemSeparatorComponent={() => (<View style={{ height: actuatedNormalize(14) }} />)}
                 style={{ marginTop: actuatedNormalize(20) }}
-                ListEmptyComponent={<EmptyListView content='No items ni your cart' />}
+                ListEmptyComponent={<EmptyListView content='No items in your cart' />}
                 ListFooterComponent={<View style={{ height: actuatedNormalize(20) }} />}
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => {
@@ -50,13 +48,21 @@ const Cart = (props) => {
             />
 
 
-            <ListItemValue label={'Total Items & Price'} value={totaItemOfAllItemsInCart} price={totaPriceOfAllItemsInCart} valueType="CART" />
+            {totaItemOfAllItemsInCart > 0 ?
 
-            <PrimaryButton
-                label='Check Out Items in Cart'
-                onPressPrimaryBtn={() => props?.navigation?.push('OrderSuccess')}
-                customPrimaryBtnStyle={{ marginBottom: actuatedNormalize(20) }}
-            />
+                <>
+                    <ListItemValue label={'Total Items & Price'} value={totaItemOfAllItemsInCart} price={totaPriceOfAllItemsInCart} valueType="CART" />
+
+                    <PrimaryButton
+                        label='Check Out Items in Cart'
+                        onPressPrimaryBtn={() => props?.navigation?.push('OrderSuccess')}
+                        customPrimaryBtnStyle={{ marginBottom: actuatedNormalize(20) }}
+                    />
+
+                </>
+
+                : null
+            }
 
         </PageBackground>
     )
