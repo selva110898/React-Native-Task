@@ -1,0 +1,76 @@
+[
+    {
+        "category": "FRUITS",
+        "categoryName": "Fruits",
+        "promotionalTxt": "Exclusive Offer",
+        "products": [
+            {
+                "product": "BANANA",
+                "productName": "Organic Banana",
+                "PromotionalTxt": "pcs, Price",
+                "ProductInfo": "Bananas contain three natural sugars – sucrose, fructose and glucose – giving you a fat and cholesterol-free source of energy. As such, bananas are ideal, especially for children and athletes, for breakfast, as a midday snack or before and after sports.",
+                "nutrients": "96gr",
+                "ratings": 3,
+                "isFav": false,
+                "howMany": 7,
+                "price": 30,
+                "addedToCart": false,
+                "totalNumbers": 0,
+                "totalPrice": 0,
+                "category": "FRUITS"
+            },
+            {
+                "product": "RED_APPLE",
+                "productName": "Natural Red Apple",
+                "PromotionalTxt": "kg, Price",
+                "ProductInfo": "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.",
+                "nutrients": "180gr",
+                "ratings": 4,
+                "isFav": false,
+                "howMany": 1,
+                "price": 100,
+                "addedToCart": false,
+                "totalNumbers": 0,
+                "totalPrice": 0,
+                "category": "FRUITS"
+            }
+        ]
+    },
+    {
+        "category": "VEGETABLES",
+        "categoryName": "Vegetables",
+        "promotionalTxt": "Best Selling",
+        "products": [
+            {
+                "product": "CAPSICUM",
+                "productName": "Capsicum",
+                "PromotionalTxt": "kg, Price",
+                "ProductInfo": "Capsicum annuum is credited with reducing the levels of high blood cholesterol, triglycerides and also regulates heart rate and hypertension. Studies reveal that regular intake of capsicum in daily diet aids in improving the platelet count and clotting.",
+                "nutrients": "80gr",
+                "ratings": 4,
+                "isFav": false,
+                "howMany": 1,
+                "price": 60,
+                "addedToCart": false,
+                "totalNumbers": 0,
+                "totalPrice": 0,
+                "category": "VEGETABLES"
+            },
+            {
+                "product": "GINGER",
+                "productName": "Ginger",
+                "PromotionalTxt": "kg, Price",
+                "ProductInfo": "Ginger offers numerous health benefits, including reducing inflammation, aiding digestion, boosting immunity, and potentially helping with conditions like nausea and migraines.",
+                "nutrients": "90gr",
+                "ratings": 4,
+                "isFav": false,
+                "howMany": 1,
+                "price": 80,
+                "addedToCart": false,
+                "totalNumbers": 0,
+                "totalPrice": 0,
+                "category": "VEGETABLES"
+            }
+        ]
+    }
+]

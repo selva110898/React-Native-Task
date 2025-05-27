@@ -1,0 +1,38 @@
+[
+    {
+        "category": "FRUITS_VEGETABLES",
+        "categoryName": "Frash Fruits & Vegetables",
+        "bgColor": "rgba(83, 177, 117, 0.1)",
+        "boderColor": "rgba(83, 177, 117, 0.7)"
+    },
+    {
+        "category": "OIL_GHEE",
+        "categoryName": "Cooking Oil & Ghee",
+        "bgColor": "rgba(248, 164, 76, 0.1)",
+        "boderColor": "rgba(248, 164, 76, 0.7)"
+    },
+    {
+        "category": "MEAT_FSH",
+        "categoryName": "Meat & Fish",
+        "bgColor": "rgba(247, 165, 147, 0.25)",
+        "boderColor": "rgba(247, 165, 147, 1)"
+    },
+    {
+        "category": "BAKERY_SNACKS",
+        "categoryName": "Bakery & Snacks",
+        "bgColor": "rgba(211, 176, 224, 0.25)",
+        "boderColor": "rgba(211, 176, 224, 1)"
+    },
+    {
+        "category": "DAIRY_EGGS",
+        "categoryName": "Dairy & Eggs",
+        "bgColor": "rgba(253, 229, 152, 0.25)",
+        "boderColor": "rgba(253, 229, 152, 1)"
+    },
+    {
+        "category": "BEVERAGES",
+        "categoryName": "Beverages",
+        "bgColor": "rgba(83, 177, 117, 0.1)",
+        "boderColor": "rgba(83, 177, 117, 0.7)"
+    }
+]
