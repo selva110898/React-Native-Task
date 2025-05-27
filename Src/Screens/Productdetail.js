@@ -77,7 +77,7 @@ const ProductDetail = (props) => {
                     source={productImages[details?.product]}
                     resizeMode='contain'
                     style={{
-                        width: '100%',
+                        width: '50%',
                         height: '100%',
                     }}
                 />
@@ -90,7 +90,7 @@ const ProductDetail = (props) => {
                     title={details?.productName}
                     text={`${details?.howMany}${details?.PromotionalTxt}`}
                     showlinkBtn
-                    subInfoTxtStyle={{ marginTop: actuatedNormalize(4) ,fontWeight:"600"}}
+                    subInfoTxtStyle={{ marginTop: actuatedNormalize(4), fontWeight: "600" }}
                     linkButton={{
                         linkbtn: <Image source={isFavItem ? require(`../../assets/FavouriteSelected.png`) : require(`../../assets/Heart.png`)} height={actuatedNormalize(24)} width={actuatedNormalize(24)} />,
                         onPressLinkBtn: () => onFavourite()

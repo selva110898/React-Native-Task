@@ -12,6 +12,7 @@ import Colors from '../Constants/Colors'
 const Login = (props) => {
 
     const initFormData = {
+
         email: {
             name: 'EMAIL',
             value: '',
@@ -19,7 +20,7 @@ const Login = (props) => {
             shouldCheckRegexPattern: true,
             regexPattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
             errorMsgs: {
-                mandatory: 'Please fill out this field',
+                mandatory: 'Please enter your email',
                 regexPatternIncorrect: "Please enter correct email"
             }
         },
@@ -28,7 +29,7 @@ const Login = (props) => {
             value: '',
             currentErrorMsg: '',
             errorMsgs: {
-                mandatory: 'Please fill out this field',
+                mandatory: 'Please enter the password',
             }
         }
     }
@@ -60,7 +61,7 @@ const Login = (props) => {
 
                 tempForData[input].currentErrorMsg = tempForData[input]?.errorMsgs?.mandatory
 
-                isFormValid = true
+                isFormValid = false
 
             } else if (tempForData[input]?.shouldCheckRegexPattern && tempForData[input]?.regexPattern) {
 
@@ -68,7 +69,7 @@ const Login = (props) => {
 
                     tempForData[input].currentErrorMsg = tempForData[input]?.errorMsgs?.regexPatternIncorrect
 
-                    isFormValid = true
+                    isFormValid = false
 
                 }
             }
@@ -85,7 +86,7 @@ const Login = (props) => {
         <PageBackground type='DESIGNED'>
 
             <StatusBar translucent backgroundColor={"transparent"} />
-            
+
             <View style={{ alignSelf: "center", marginTop: actuatedNormalize(80) }}>
                 <Image source={require('../../assets/AppleRed.png')} />
             </View>
