@@ -73,7 +73,9 @@ const ProductsBlock = (props: ProductsBlockProps) => {
                 <Text style={styles.subTxt}>{subTitle}</Text>
             </View>
 
+
             {counterRequired && (
+
                 <Counter
                     price={wholeItem?.totalPrice || wholeItem?.price}
                     mainContainerStyle={{ marginBottom: actuatedNormalize(10), marginHorizontal: actuatedNormalize(15) }}
@@ -81,6 +83,7 @@ const ProductsBlock = (props: ProductsBlockProps) => {
                     onPressDecrement={() => onCounterItem('DECREMENT')}
                 />
             )}
+
         </Pressable>
     );
 };
@@ -94,7 +97,8 @@ const styles = StyleSheet.create({
         fontSize: actuatedNormalize(16),
         color: Colors.primaryTextColorBlack,
         lineHeight: actuatedNormalize(22),
-        textAlign: "center"
+        textAlign: "center",
+        width:actuatedNormalize(125)
     },
     subTxt: {
         fontFamily: Fonts.GilroyMedium,
