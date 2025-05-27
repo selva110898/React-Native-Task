@@ -24,7 +24,7 @@ const productSlice = createSlice({
                                         ...prod,
                                         totalNumbers,
                                         totalPrice: totalNumbers * prod.price,
-                                        addedToCart: totalNumbers
+                                        addedToCart: totalNumbers > 0 ? true : false
                                     };
                                 } else if (type == "FAVOURITE") {
                                     return {

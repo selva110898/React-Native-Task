@@ -65,19 +65,12 @@ const ProductDetail = (props) => {
 
             <Header isRequiredSpacingAtTheTop />
 
-            <View style={{
-                height: actuatedNormalize(240),
-                backgroundColor: "#F2F3F2",
-                borderBottomRightRadius: actuatedNormalize(25),
-                borderBottomLeftRadius: actuatedNormalize(25),
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}>
+            <View style={styles.imageView}>
                 <Image
                     source={productImages[details?.product]}
                     resizeMode='contain'
                     style={{
-                        width: '50%',
+                        width: '55%',
                         height: '100%',
                     }}
                 />
@@ -143,5 +136,13 @@ export default ProductDetail
 const styles = StyleSheet.create({
     inputView: {
         paddingHorizontal: actuatedNormalize(25)
+    },
+    imageView: {
+        height: actuatedNormalize(240),
+        backgroundColor: "#F2F3F2",
+        borderBottomRightRadius: actuatedNormalize(25),
+        borderBottomLeftRadius: actuatedNormalize(25),
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 })

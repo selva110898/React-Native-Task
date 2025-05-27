@@ -12,15 +12,11 @@ const Favourite = () => {
 
     const productList = useSelector((state) => state.products.value);
 
-    // Filter the favorite products and flatten the array
-    const favProducts = []
-
-    let sqdc = productList?.map((item) => {
+    let favProducts = productList?.map((item) => {
         let favItems = item?.products?.filter((item1) => item1?.isFav);
         return favItems;
-    });
+    }).flat().filter(item => item)
 
-    let updated = sqdc.flat().filter(item => item)
 
     return (
 
@@ -29,12 +25,12 @@ const Favourite = () => {
             <Header isRequiredSpacingAtTheTop title='Favourites' />
 
             <FlatList
-                data={updated}
+                data={favProducts}
                 numColumns={2}
                 keyExtractor={(item) => item.product}
                 ItemSeparatorComponent={() => (<View style={{ height: actuatedNormalize(14) }} />)}
                 style={{ marginTop: actuatedNormalize(20) }}
-                ListEmptyComponent={<EmptyListView content='No favourites yet , Please add your favourite items and come back'/>}
+                ListEmptyComponent={<EmptyListView content='No favourites yet , Please add your favourite items and come back' />}
                 ListFooterComponent={<View style={{ height: actuatedNormalize(20) }} />}
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => {

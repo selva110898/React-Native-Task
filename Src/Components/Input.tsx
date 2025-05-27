@@ -53,15 +53,18 @@ const Input = (props: InputProps) => {
         if (searchTxt != '') {
 
             console.log("seewfd;bdlkjn")
+            
             let searchTxtLower = searchTxt.toLowerCase();
-            console.log(searchData, "searchData")
+
             let filteredData = searchData.current.filter(item => (searchTerms || []).some(term => String(item[term] || '').toLowerCase().includes(searchTxtLower)))
 
             console.log(filteredData, "FILTERER")
-            afterSearchData && afterSearchData(filteredData)
+
+            afterSearchData(filteredData)
 
         } else {
-            afterSearchData && afterSearchData(searchData.current)
+
+             afterSearchData(searchData.current)
 
         }
 
